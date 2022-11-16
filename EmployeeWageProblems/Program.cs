@@ -7,8 +7,12 @@ namespace EmployeeWageProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Problem statement");
-            EmployeeWage.EmpWage("LNT", 20, 22, 25);
-            EmployeeWage.EmpWage("TIPL", 20, 22, 25);
+            EmpWageBuilderObject LNT = new EmpWageBuilderObject("LNT", 20, 2, 20);
+            EmpWageBuilderObject TIPL = new EmpWageBuilderObject("TIPL", 20, 2, 20);
+            LNT.ComputeEmpWage();
+            Console.WriteLine(LNT.ToString());
+            TIPL.ComputeEmpWage();
+            Console.WriteLine(TIPL.ToString());
         }
     }
 }
